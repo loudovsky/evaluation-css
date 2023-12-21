@@ -1,0 +1,38 @@
+.wrapper {
+    margin: 0 auto;
+}
+
+.wrapper {
+    width: 95vw;
+}
+
+button {
+    cursor: pointer;
+    background-color: #fff;
+    color: black;
+    border: 1px solid black;
+    padding: 10px;
+    text-transform: uppercase;
+    font-family: 'PT Serif', serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    @include transition;
+    .bold {
+        font-weight: 700;
+        font-size: 25px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    &:hover {
+        color: #ff0303;
+        border-color: #ff0303;
+        @include transition;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .wrapper {
+        width: 1000px;
+    }
+}
