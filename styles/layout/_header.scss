@@ -3,6 +3,9 @@ header {
     background-color: #fff;
     .top {
         border-bottom: 1px solid #e2e2e2;
+        p {
+            font-size: 14px;
+        }
         .logo-add {
             display: flex;
             flex-direction: column;
@@ -66,17 +69,31 @@ header {
             display: none;
             justify-content: space-between;
             a {
-                color: #000;
+                color: #3a3a3a;
                 text-decoration: none;
                 text-transform: uppercase;
+                &:hover {
+                    color: #ff0303;
+                }
             }
             .text {
+                display: flex;
+                gap: 10px;
                 a {
                     font-weight: 500;
                 }
                 .red {
                     color: #ff0303;
                 }
+            }
+        }
+        @media screen and (min-width: 1000px)
+        {
+            .menu {
+                display: none;
+            }
+            nav {
+                display: flex;
             }
         }
     }
