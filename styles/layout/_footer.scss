@@ -1,0 +1,17 @@
+footer {
+    position: relative;
+    background: url(../images/footer.jpg) center/cover;
+    height: 1000px;
+    &::after {
+        content: '';
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.411);
+        height: 100%;
+        width: 100%;
+        top:0;
+        left: 0;
+        z-index: 0;
+    }
+
+}
+

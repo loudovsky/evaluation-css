@@ -7,30 +7,23 @@ header {
             font-size: 14px;
         }
         .logo-add {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            gap:40px;
-            padding: 20px 0;
-            
+            display: grid;
+            grid-template-columns: repeat( auto-fit, minmax(150px, 1fr) );
+            gap: 20px;
+            padding: 30px 0;
             img {
-                width: 200px;
+                display: block;
+            }
+            .logo {
+                grid-column: span 2;
+                padding: 20px 0;
             }
             .add {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                background-color: #cfcfcf;
-                height: 50px;
-                text-decoration: none;
-                text-transform: uppercase;
-                color: #fff;
-                text-align: center;
-                font-size: 10px;
-                font-weight:400;
-                letter-spacing: 1.5px;
-        
+                
+                grid-column: span 3;
+                img {
+                    width: 100%;
+                }
             }
         }
     }
