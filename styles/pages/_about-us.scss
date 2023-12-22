@@ -1,0 +1,103 @@
+.about {
+    .main {
+        padding: 100px 0;
+    }
+}  
+
+.history {
+    .text {
+        display: grid;
+        grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
+        gap: 20px;
+    }
+}
+
+.team {
+    margin-top: 50px;
+    h1 {
+        margin: 40px 0;
+    }
+    .editors {
+        display: grid;
+        grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
+        gap:20px;
+        .editor {
+            .img {
+                width: 100%;
+                overflow: hidden;
+                img {
+                    display: block;
+                    width: 100%;
+                }
+            }
+            .editor-logos {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .sub-title {
+                    font-family: 'PT Serif', serif;
+                    font-size: 18px;
+                }
+                .logos {
+                    display: flex;
+                    justify-content: flex-end;
+                    gap:8px;
+                    a {
+                        text-decoration: none;
+                        color: #b6b6b6;
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.join {
+    background: url(../images/cta.jpg) center/cover;
+    background-attachment: fixed;
+    position: relative;
+    padding: 100px 0;
+    &::after {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: #000000a3;
+    }
+    .wrapper {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h1 {
+            color: #fff;
+            font-size: 35px;
+        }
+        p {
+            width: 70%;
+            text-align: center;
+        }
+        button {
+            background-color: #ffffff00;
+            color: #fff;
+            border-color: #fff;
+            font-size: 20px;
+            padding: 15px 20px;
+            &:hover {
+                color: #ff0303;
+                border-color: #ff0303;
+                @include transition;
+            }
+            span {
+                font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            }
+        }
+    }
+
+}
+

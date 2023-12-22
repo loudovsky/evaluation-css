@@ -1,17 +1,84 @@
 footer {
     position: relative;
     background: url(../images/footer.jpg) center/cover;
-    height: 1000px;
     &::after {
         content: '';
         position: absolute;
-        background-color: rgba(0, 0, 0, 0.411);
+        background-color: rgba(0, 0, 0, 0.677);
         height: 100%;
         width: 100%;
         top:0;
         left: 0;
         z-index: 0;
     }
-
+    .back-top {
+        position: absolute;
+        right: 10%;
+        top: 5%;
+        height: 50px;
+        width: 50px;
+        background-color: crimson;
+        z-index: 2;
+        text-decoration: none;
+        color:white;
+        font-weight: 600;
+        font-size: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer {
+        position: relative;
+        z-index: 1;
+        padding: 100px 0 50px;
+        display: grid;
+        grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+        gap : 20px;
+        h1 {
+            color: #fff;
+            font-size: 24px;
+        }
+        .column {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap:15px;
+            a {
+                font-size: 14px;
+                font-family: 'PT Serif', serif;
+                text-decoration: none;
+                color: #c9c9c9;
+                @include transition;
+                &:hover {
+                    padding-left: 5px;
+                    color:#fff; 
+                    @include transition;
+                }
+            }
+        }   
+    }
+    .copyright {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        border-top: 1px solid #6b6b6b; ;
+        text-align: center;
+        color: #fff ;
+        padding: 30px 0;
+        font-family: 'Roboto', sans-serif;
+        font-size: 12px;
+        a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+        }
+    } 
+    @media screen and (min-width: 760px) 
+    {
+        .footer {
+            grid-template-columns: repeat(6, 1fr);
+        }
+    }
 }
 
